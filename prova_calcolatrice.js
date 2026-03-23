@@ -34,3 +34,20 @@ switch (operazione) {
         break;
 }
 
+/*
+
+MA QUINDI quando gli dico: node prova_calcolatrice.js 10 / 0
+args0 è 10 args 1 è / e args 2 è 0 ...GIUSTO???
+Esatto! Perfetto.
+
+
+node prova_calcolatrice.js 10 / 0
+                           ↑   ↑  ↑
+                         args[0] args[1] args[2]
+args[0] = '10' → parseFloat lo converte in numero 10
+args[1] = '/' → rimane stringa, usata nello switch
+args[2] = '0' → parseFloat lo converte in numero 0
+Hai capito tutto!
+
+*/
+
