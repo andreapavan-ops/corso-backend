@@ -22,9 +22,15 @@ switch (operazione) {
         console.log('Risultato:', num1 * num2);
         break;
     case '/':
+    if (num2 === 0) {
+        console.log('Errore: divisione per zero!');
+    } else {
         console.log('Risultato:', num1 / num2);
-        break;
+    }
+    break;
+        
     default:
         console.log('Operazione non valida');
         break;
 }
+
