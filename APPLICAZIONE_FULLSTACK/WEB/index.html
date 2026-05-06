@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicazione Fullstack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mini Social</h1>
+        <span>connesso a <code>localhost:3000</code></span>
+        <div id="errore"></div>
+    </header>
+
+    <main>
+        <section class="colonna">
+            <h2>Utenti</h2>
+            <div id="lista-utenti"></div>
+        </section>
+
+        <section class="colonna">
+            <h2 id="titolo-post">Post</h2>
+            <div id="lista-post">
+                <p class="placeholder">Seleziona un utente</p>
+            </div>
+        </section>
+
+        <section class="colonna">
+            <h2 id="titolo-commenti">Commenti</h2>
+            <div id="lista-commenti">
+                <p class="placeholder">Seleziona un post</p>
+            </div>
+        </section>
+</main>
+
+
+
+    <section class="form-sezione">
+    <h2>Registrazione Nuovo Utente</h2>
+
+    <form id="form-utente">
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Inserisci il nome" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="esempio@email.com" required>
+    </div>
+
+    <div class="form-group">
+        <label for="citta">Città (opzionale):</label>
+        <input type="text" id="citta" placeholder="E.g. Roma">
+    </div>
+
+    <button type="button" id="btn-aggiungi">Aggiungi utente</button>
+
+    </form>
+    
+
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

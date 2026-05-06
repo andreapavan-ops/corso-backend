@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f0f2f5;
+    color: #1a1a2e;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Header ── */
+header {
+    background: #1a1a2e;
+    color: white;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+header span {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+header code {
+    color: #7ecfff;
+    font-size: 0.8rem;
+}
+
+/* ── Layout 3 colonne ── */
+main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.colonna {
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+    border-right: 1px solid #dde1e7;
+    background: white;
+    overflow: hidden;
+}
+
+.colonna:last-child {
+    border-right: none;
+}
+
+.colonna h2 {
+    padding: 1rem 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #666;
+    border-bottom: 1px solid #dde1e7;
+    background: #fafafa;
+}
+
+/* ── Lista generica ── */
+.colonna > div {
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* ── Ogni riga (utente / post / commento) ── */
+.riga {
+    padding: 0.9rem 1.2rem;
+    border-bottom: 1px solid #f0f2f5;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.riga:hover {
+    background: #f5f7ff;
+}
+
+.riga.attivo {
+    background: #eef2ff;
+    border-left: 3px solid #4f6ef7;
+}
+
+.riga .nome {
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+.riga .dettaglio {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* ── Commenti ── */
+.riga .autore {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #4f6ef7;
+    margin-bottom: 0.3rem;
+}
+
+.riga .testo {
+    font-size: 0.85rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* ── Messaggio di errore ── */
+#errore:not(:empty) {
+    background: #ff4d4f;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-left: auto;
+}
+
+/* ── Placeholder (testo grigio quando non c'è selezione) ── */
+.placeholder {
+    padding: 2rem 1.2rem;
+    color: #aaa;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.azione {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+.azione a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #4f6ef7;
+}
+
+.btn-delete {
+    padding: 0.2rem 0.4rem;
+    background: transparent;
+    color: #cc0000;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    line-height: 1;
+}
+
+.btn-delete:hover {
+    background: #fff0f0;
+}
+
+.btn-edit {
+    padding: 0.2rem 0.4rem;
+    background: transparent;
+    color: #2a7a2a;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    line-height: 1;
+}
+
+.btn-edit:hover {
+    background: #f0fff0;
+}
+
+
+.form-sezione {
+    padding: 2rem;
+    border-top: 1px solid #333;
+    max-width: 400px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #1a1a2e;
+}
+
+input {
+    padding: 0.5rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #1a1a2e;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.6rem 1.5rem;
+    background-color: #4f6ef7;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.edit-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px;
+}
